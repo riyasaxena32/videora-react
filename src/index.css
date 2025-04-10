@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Custom grid background pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(50, 50, 50, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(50, 50, 50, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom styling for the design */
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+}
+
+.text-7xl {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+/* Header styling */
+header {
+  padding-top: 1.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+/* Features section styling */
+.features-container {
+  position: relative;
+  max-width: 70%;
+}
+
+.features-list {
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.phone-container {
+  z-index: 20;
+  width: 380px;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+
+.phone-mockup {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9/19;
+  object-fit: contain;
+}
+
+.portrait-image {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: none;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hero section specific styling */
+.hero-title {
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.05em;
+}
+
+.hero-subtitle {
+  color: #fe3d00;
+  margin-bottom: 5rem;
+  font-size: 1.25rem;
+}
+
+.hero-description {
+  max-width: 20rem;
+  color: #878787;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Character studio section styling */
+.character-images-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+}
+
+.character-image-large {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65%;
+  z-index: 20;
+}
+
+.character-image-small {
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 45%;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+  
+  .character-images-container {
+    height: 400px;
+  }
+} 
